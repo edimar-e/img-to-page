@@ -15,11 +15,11 @@ static void list_dir(const char *path) {
      	const char *ext = strrchr(entry->d_name,'.');
 		if((ext==NULL)){
 			const char *fname = entry->d_name;
-			char *cp; sprintf(cp,"copy parse.exe %s",fname);		    
+			char *cp; sprintf(cp,"copy conv.exe %s",fname);		    
 			system(cp); 
-			char *exe; sprintf(exe,"start %s/parse.exe",fname);
+			char *exe; sprintf(exe,"start %s/conv.exe",fname);
 			system(exe);
-		    char *del; sprintf(del,"del %s/parse.exe",fname);
+		    char *del; sprintf(del,"del %s/conv.exe",fname);
 			system(exe);
 			
 		}
