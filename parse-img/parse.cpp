@@ -16,11 +16,11 @@ static void list_dir(const char *path) {
 		if((ext==NULL)){
 			const char *fname = entry->d_name;
 			char *cp; sprintf(cp,"copy parse.exe %s",fname);		    
-			system(cp); Sleep(200);
+			system(cp); 
 			char *exe; sprintf(exe,"start %s/parse.exe",fname);
-			system(exe);Sleep(200);
+			system(exe);
 		    char *del; sprintf(del,"del %s/parse.exe",fname);
-			system(exe);Sleep(200);
+			system(exe);
 			
 		}
 	    
